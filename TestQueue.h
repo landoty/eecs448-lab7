@@ -14,5 +14,7 @@ class TestQueue : public Test
     void test0(); //Create queue
     void test1(); //New queue is empty
     void test2(); //Can't dequeue empty queue
+    void test3(); //Enqueue makes queue non empty
+    void test4(); //Enqueued value is seen with peekFront
 };
 #endif
