@@ -1,10 +1,8 @@
 #include "TestQueue.h"
 
-TestQueue::TestQueue(int testSize, bool useFile)
-{
-  TEST_SIZE = testSize;
-  USE_FILE = useFile;
-}
+TestQueue::TestQueue(int testSize, bool useFile): Test(testSize, useFile)
+{}
+
 void TestQueue::runTests()
 {
   test0();

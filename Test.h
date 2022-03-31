@@ -10,14 +10,14 @@ class Test {
   public:
     Test(int testSize, bool useFile);
     virtual void runTests() = 0;
-  private:
+  protected:
     int m_tests;
     int m_currentTest;
     bool m_useFile;
     std::ofstream testFile;
     std::string m_currentTestMessage;
 
-    void printBool(bool isPassed) const;
+    void printBool(bool isPassed);
     void printTestMessage(std::string testMessage);
     void printException();
     void toFile();

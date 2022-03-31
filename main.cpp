@@ -7,6 +7,7 @@
 #include <iostream>
 #include <stdexcept>
 #include "TestQueue.h"
+#include "Queue.h"
 
 int main()
 {
