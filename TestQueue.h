@@ -11,6 +11,8 @@ class TestQueue : public Test
     TestQueue(int testSize, bool useFile);
     void runTests();
 
-    void test0();
+    void test0(); //Create queue
+    void test1(); //New queue is empty
+    void test2(); //Can't dequeue empty queue
 };
 #endif
