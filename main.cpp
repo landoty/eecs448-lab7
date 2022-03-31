@@ -1,6 +1,6 @@
 /**
 *	@file main.cpp
-*	@author John Gibbons
+*	@author Landen Doty
 *	@date 2014.04.02
 */
 

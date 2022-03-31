@@ -20,5 +20,6 @@ class TestQueue : public Test
     void test6(); //Equal enqueue and dequeue leaves queue empty
     void test7(); //Cannot peek empty queue
     void test8(); //Nth enqueued value seen after N-1 dequeues
+    void test9(); //Destructor leaves queue empty
 };
 #endif

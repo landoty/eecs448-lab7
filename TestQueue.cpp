@@ -14,6 +14,7 @@ void TestQueue::runTests()
   test6();
   test7();
   test8();
+  test9();
 }
 
 void TestQueue::test0()
@@ -193,6 +194,29 @@ void TestQueue::test8()
       q.dequeue();
     }
     printBool(q.peekFront()==10);
+    toFile();
+  }
+  catch(std::exception& e)
+  {
+    printBool(0);
+    printException();
+    toFile();
+  }
+}
+
+void TestQueue::test9()
+{
+  std::string descr = "Destructor leaves queue empty";
+  printTestMessage(descr);
+  try
+  {
+    Queue q;
+    for(int i=0; i<=10; i++)
+    {
+      q.enqueue(i);
+    }
+    q.~Queue();
+    printBool(q.isEmpty());
     toFile();
   }
   catch(std::exception& e)
