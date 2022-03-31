@@ -1,1 +1,2 @@
-Enqueue adds node to the front/top rather than the back/bottom, effectively functioning like a stack
+1. Enqueue adds node to the front/top rather than the back/bottom, effectively functioning like a stack
+2. Destructor does not clear queue

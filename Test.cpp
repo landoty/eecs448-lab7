@@ -31,11 +31,7 @@ void Test::printTestMessage(std::string testMessage)
 {
   m_currentTest++;
   std::cout << "Test #" << m_currentTest << ": " << testMessage << ": ";
-  m_currentTestMessage = m_currentTestMessage + "Test #";
-  m_currentTestMessage = m_currentTestMessage + std::to_string(m_currentTest);
-  m_currentTestMessage = m_currentTestMessage + ": ";
-  m_currentTestMessage = m_currentTestMessage + testMessage;
-  m_currentTestMessage = m_currentTestMessage + ": ";
+  m_currentTestMessage = m_currentTestMessage + "Test #" + std::to_string(m_currentTest) + ": " + testMessage + ": ";
 }
 
 void Test::printException()
