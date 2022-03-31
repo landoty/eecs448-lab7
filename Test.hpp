@@ -34,13 +34,14 @@ void Test::printTestMessage(std::string testMessage)
 void Test::printException() const
 {
   std::cout << "Exception occurred\n";
+  m_currentTestMessage += "Exception occurred\n";
 }
 
 void Test::toFile()
 {
   if(USE_FILE)
   {
-    testFile.open();
+    testFile.open("test.txt");
     testFile << m_currentTestMessage;
     testFile.close();
   }
