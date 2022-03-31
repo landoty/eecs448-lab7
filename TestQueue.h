@@ -11,6 +11,6 @@ class TestQueue : public Test
     TestQueue(int testSize, bool useFile);
     void runTests();
 
-    bool test0();
+    void test0();
 }
 #endif
