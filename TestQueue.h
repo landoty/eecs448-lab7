@@ -19,5 +19,6 @@ class TestQueue : public Test
     void test5(); //First enqueued value seen at front
     void test6(); //Equal enqueue and dequeue leaves queue empty
     void test7(); //Cannot peek empty queue
+    void test8(); //Nth enqueued value seen after N-1 dequeues
 };
 #endif

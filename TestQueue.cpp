@@ -13,6 +13,7 @@ void TestQueue::runTests()
   test5();
   test6();
   test7();
+  test8();
 }
 
 void TestQueue::test0()
@@ -172,6 +173,32 @@ void TestQueue::test7()
   catch(std::exception& e)
   {
     printBool(1);
+    toFile();
+  }
+}
+
+void TestQueue::test8()
+{
+  std::string descr = "Nth enqueued value seen after N-1 dequeues";
+  printTestMessage(descr);
+  try
+  {
+    Queue q;
+    for(int i=0; i<=10; i++)
+    {
+      q.enqueue(i);
+    }
+    for(int i=0; i<=9; i++)
+    {
+      q.dequeue();
+    }
+    printBool(q.peekFront()==10);
+    toFile();
+  }
+  catch(std::exception& e)
+  {
+    printBool(0);
+    printException();
     toFile();
   }
 }
