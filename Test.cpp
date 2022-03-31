@@ -1,3 +1,9 @@
+/**
+*	@file main.cpp
+*	@author Landen Doty
+*	@date 2022.03.30
+*/
+
 #include "Test.h"
 
 Test::Test(int testSize, bool useFile)

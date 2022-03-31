@@ -1,3 +1,9 @@
+/**
+*	@file main.cpp
+*	@author Landen Doty
+*	@date 2022.03.30
+*/
+
 #include "TestQueue.h"
 
 TestQueue::TestQueue(int testSize, bool useFile): Test(testSize, useFile)

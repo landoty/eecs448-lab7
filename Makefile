@@ -1,3 +1,9 @@
+#
+# *	@file main.cpp
+# *	@author Landen Doty
+# *	@date 2022.03.30
+#
+
 QueueDemo: main.o Test.o TestQueue.o
 	g++ -g -Wall -std=c++11 main.o Test.o Queue.o TestQueue.o -o QueueDemo
 
