@@ -11,6 +11,8 @@ void TestQueue::runTests()
   test3();
   test4();
   test5();
+  test6();
+  test7();
 }
 
 void TestQueue::test0()
@@ -109,7 +111,7 @@ void TestQueue::test4()
 
 void TestQueue::test5()
 {
-  std::string descr = "First enqueued value not seen at front";
+  std::string descr = "First enqueued value seen at front";
   printTestMessage(descr);
   try
   {
@@ -125,6 +127,51 @@ void TestQueue::test5()
   {
     printBool(0);
     printException();
+    toFile();
+  }
+}
+
+void TestQueue::test6()
+{
+  std::string descr = "Equal enqueue and dequeue leaves queue empty";
+  printTestMessage(descr);
+  try
+  {
+    Queue q;
+    for(int i=0; i<10; i++)
+    {
+      q.enqueue(i);
+    }
+    for(int i=0; i<10; i++)
+    {
+      q.dequeue();
+    }
+    printBool(q.isEmpty());
+    toFile();
+  }
+  catch(std::exception& e)
+  {
+    printBool(0);
+    printException();
+    toFile();
+  }
+}
+
+void TestQueue::test7()
+{
+  std::string descr = "Cannot peek empty queue";
+  printTestMessage(descr);
+  try
+  {
+    Queue q;
+    q.peekFront();
+    //Should not be able to peek empty queue
+    printBool(0);
+    toFile();
+  }
+  catch(std::exception& e)
+  {
+    printBool(1);
     toFile();
   }
 }
