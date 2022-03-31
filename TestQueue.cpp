@@ -10,6 +10,7 @@ void TestQueue::runTests()
   test2();
   test3();
   test4();
+  test5();
 }
 
 void TestQueue::test0()
@@ -89,13 +90,35 @@ void TestQueue::test3()
 
 void TestQueue::test4()
 {
-  std::string descr = "Enqueued value is seen at front";
+  std::string descr = "Single enqueued value is seen at front";
   printTestMessage(descr);
   try
   {
     Queue q;
     q.enqueue(1);
     printBool(q.peekFront() == 1);
+    toFile();
+  }
+  catch(std::exception& e)
+  {
+    printBool(0);
+    printException();
+    toFile();
+  }
+}
+
+void TestQueue::test5()
+{
+  std::string descr = "First enqueued value not seen at front";
+  printTestMessage(descr);
+  try
+  {
+    Queue q;
+    for(int i=0; i<10; i++)
+    {
+      q.enqueue(i);
+    }
+    printBool(q.peekFront() == 0);
     toFile();
   }
   catch(std::exception& e)
