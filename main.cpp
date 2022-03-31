@@ -6,11 +6,12 @@
 
 #include <iostream>
 #include <stdexcept>
-#include "Queue.h"
+#include "TestQueue.h"
 
 int main()
 {
-	Queue q;
+	TestQueue test(1, 1);
+	test.runTests();
 
 	return(0);
 }

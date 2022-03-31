@@ -12,5 +12,5 @@ class TestQueue : public Test
     void runTests();
 
     void test0();
-}
+};
 #endif
