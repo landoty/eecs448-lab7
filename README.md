@@ -29,7 +29,9 @@ The TestQueue class inherits from Test and implements each of the tests:
 
 ## Compilation and running
 
-``sh
+```sh
 $ make
+```
+```sh
 $ ./TestQueue
-``
+```
